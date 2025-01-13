@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
-
 :root {
     --colorTextSecondary: floralwhite;
 
@@ -12,6 +11,8 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -39,28 +40,34 @@ footer {
     text-align: center;
 }
 
-input[type=text] {
-    text-align: right;
-}
-
-input[type=submit] {
-    display: inline-block;
-    border: thin solid var(--colorSecondary);
-    color: var(--colorPrimary);
-    background-color: var(--colorTertiary);
-    margin-top: 0.5rem;
-    padding: 0.5rem 0.5rem;
-    border-radius: 0.25rem;
-    font-family: var(--fontMain);
-    font-size: 1.2rem;
-}
-input[type=submit]:hover {
-    background-color: var(--colorSecondary);
-    cursor: pointer;
-}
-input[type=submit]:active {
-    background-color: var(--colorTextSecondary);
-    user-select: none;
+form {
+    label {
+        display: inline-block;
+        min-width: 4rem;
+    }
+    input[type=text] {
+        text-align: right;
+    }
+    
+    button[type=submit] {
+        display: inline-block;
+        border: thin solid var(--colorSecondary);
+        color: var(--colorPrimary);
+        background-color: var(--colorTertiary);
+        margin-top: 0.5rem;
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.25rem;
+        font-family: var(--fontMain);
+        font-size: 1.2rem;
+        &:hover {
+            background-color: var(--colorSecondary);
+            cursor: pointer;
+        }
+        &:active {
+            background-color: var(--colorTextSecondary);
+            user-select: none;
+        }
+    }
 }
 
 section#results {

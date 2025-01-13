@@ -1,5 +1,3 @@
-'use strict';
-
 document.querySelector('#frmMain').addEventListener('submit', (e) => {
     e.preventDefault();
 
